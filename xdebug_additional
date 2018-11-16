@@ -1,0 +1,9 @@
+xdebug.remote_enable=on
+xdebug.remote_autostart=on
+xdebug.remote_handler=dbgp
+xdebug.idekey=PHPSTORM
+xdebug.remote_connect_back=0
+xdebug.remote_mode=req
+xdebug.remote_port=9015
+xdebug.remote_host=localhost
+
