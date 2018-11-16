@@ -14,9 +14,9 @@ RUN apt-get update && apt-get install -y \
         telnet \
         zlib1g-dev \
         unzip
-RUN docker-php-ext-install mcrypt intl pgsql pdo_pgsql bcmath opcache zip && docker-php-ext-enable opcache
+RUN docker-php-ext-install intl pgsql pdo_pgsql bcmath opcache zip && docker-php-ext-enable opcache
 
-RUN yes | pecl install xdebug-2.5.0 && docker-php-ext-enable xdebug
+RUN yes | pecl install xdebug && docker-php-ext-enable xdebug
 COPY xdebug_additional /
 RUN cat /xdebug_additional >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
 
